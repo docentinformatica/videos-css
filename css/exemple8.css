@@ -1,0 +1,67 @@
+/* Selector de pseudo-classe: selecciona l'element arrel del document (element html)  */
+:root {
+  background-color: rgba(218, 193, 193, 0.824);
+}
+
+/* Selector simple per nom d'element */
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  background-color: blanchedalmond;
+}
+
+/* Selector simple per nom d'element */
+label {
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Selector d'atribut pel valor search de l'atribut type per l'element input */
+input[type="search"] {
+ border-radius: 4px;
+ border-color: gray;
+ border-style: solid;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ width: 300px;
+ height: 35px;
+}
+
+/* Selector d'atribut pel valor search de l'atribut type per l'element input + Selector de pseudo-classe: selecciona els elements input que no tenen elements fills ni text */
+input[type="search"]:empty {
+  color: brown;
+}
+
+/* Selector simple per nom de classe i d'element */
+input.boto-cercar {
+  width: 140px;
+  height: 30px;
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+/* Selector de pseudo-classe que parteix d'un selector simple per nom de classe i d'element  */
+input.boto-cercar:hover {
+  background-color: rgb(239, 147, 105);
+}
+
+/* Selector de pseudo-classe */
+p:hover {
+  background-color: rgb(239, 147, 105);
+  line-height: 30px;
+  font-size: 1.2em;
+}
+
+/* Selector de pseudo-element */
+p::selection {
+  background-color: blanchedalmond;
+  color: brown;
+}
+
+/* Selector combinador (selector simple per nom d'element i selector de pseudo-classe): selecciona tots els elements que tenen com a valor de l'atribut lang en-US i que estan dins de l'element cite */
+cite :lang(en-US) {
+  color: royalblue;
+  cursor: pointer;
+  font-variant-caps: all-small-caps;
+  text-decoration: none;
+  font-size: 28px;
+}
